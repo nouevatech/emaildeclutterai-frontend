@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", "sans-serif";
+  scroll-behavior: smooth;
+  --animate-duration: 2s;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  letter-spacing: 0.5px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: currentColor;
+
+  [href^="tel"] {
+    text-decoration: none;
+  }
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
