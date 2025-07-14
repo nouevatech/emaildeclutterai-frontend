@@ -38,7 +38,7 @@ export const HeroSection = () => {
           <img
             src={HomeImage}
             alt="Email decluttering dashboard interface showing smart suggestions and bulk actions"
-            className="transform hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="cursor-pointer transform hover:scale-105 transition-transform duration-300 ease-in-out"
           />
         </div>
       </div>
