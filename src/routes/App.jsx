@@ -1,13 +1,13 @@
 import { Outlet } from "react-router";
 import "../App.css";
-import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
+import { Footer } from "../components/Footer";
+import { Navbar } from "../components/Navbar";
 
 function App() {
   return (
-    <div className="w-full text-center mt-20">
-      <Navigation />
-      <div>
+    <div className=" min-h-screen flex flex-col">
+      <Navbar />
+      <div className="flex-1">
         <Outlet />
       </div>
       <Footer />

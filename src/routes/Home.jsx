@@ -1,9 +1,12 @@
+import { Demo } from "../components/Demo";
+import { HeroSection } from "../components/HeroSection";
+
 export default function Home() {
   return (
     <div>
-      <div>Hero</div>
+      <HeroSection />
       <div>How it works</div>
-      <div>Demo</div>
+      <Demo />
     </div>
   );
 }
