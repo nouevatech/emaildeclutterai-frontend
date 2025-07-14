@@ -11,6 +11,7 @@
 
 body {
   overflow-x: hidden;
+  background-color: #fafafa;
 }
 
 html {
@@ -20,7 +21,6 @@ html {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: currentColor;
 
   [href^="tel"] {
     text-decoration: none;
