@@ -4,8 +4,8 @@ export const Demo = () => {
   return (
     <section className="px-8 lg:px-24">
       <hr className=" border border-[#D7D7D7] text" />
-      <div className="flex  justify-between items-start py-8">
-        <p className="text-[#666666] text-base lg:text-lg max-w-[500px] ">
+      <div className="flex flex-col gap-y-3 lg:flex-row lg:gap-y-0 justify-between items-start py-8">
+        <p className="text-[#666666] text-lg lg:text-lg max-w-[500px] ">
           The AI-powered email decluttering app built for decision-makers.
           Unsubscribe, delete, and summarize in one click.
         </p>

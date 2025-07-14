@@ -8,9 +8,9 @@ import { IoPlayCircleOutline } from "react-icons/io5";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#171717] px-24 py-10">
+    <footer className="bg-[#171717] px-6 lg:px-24 py-10">
       <Logo variant="white" />
-      <p className="max-w-[350px] font-medium tracking-widest text-white uppercase  text-2xl py-8">
+      <p className="max-w-[350px] font-medium tracking-widest text-white uppercase text-lg lg:text-2xl py-8">
         Unsubscribe, delete, and summarize Your Inbox in{" "}
         <span className="relative inline-block">
           {" "}
@@ -23,7 +23,7 @@ export const Footer = () => {
         </span>
         .
       </p>
-      <section className="flex justify-between items-end">
+      <section className="flex flex-col gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between lg:items-end">
         <div className="flex gap-4">
           <Link
             to="/try-free"
