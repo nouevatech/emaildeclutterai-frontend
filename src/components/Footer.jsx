@@ -21,7 +21,6 @@ export const Footer = () => {
             className="absolute -bottom-1 left-0 w-full h-auto"
           />
         </span>
-        .
       </p>
       <section className="flex justify-between items-end">
         <div className="flex gap-4">
