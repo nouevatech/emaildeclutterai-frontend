@@ -15,11 +15,11 @@ const Logo = ({ variant = "default" }) => {
     <div className="flex items-end ">
       <img
         src={logo}
-        style={{ width: "35px", height: "auto" }}
+        style={{ width: "30px", height: "auto" }}
         alt="EmaildeclutterAi Logo"
         className={svgColorVariants[variant]}
       />
-      <p className={`text-xl font-medium ${colorVariants[variant]}`}>
+      <p className={`text-base font-medium ${colorVariants[variant]}`}>
         EmaildeclutterAi
       </p>
     </div>
