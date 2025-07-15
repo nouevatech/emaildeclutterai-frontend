@@ -3,6 +3,7 @@ import { BiMenu } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logoblack from "/logoblack.png";
+import Logo from "./Logo";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -44,12 +45,10 @@ export function Navbar() {
       <header className="sticky top-0 z-50 bg-white shadow-sm px-6 lg:px-10 py-4">
         <div className="relative flex items-center justify-between">
           {/* Left: Logo */}
-          <Link to="/" className="text-base font-semibold text-gray-700">
-            <img
-              src={logoblack}
-              alt="emaildeclutterai logo black"
-              className="h-10"
-            />
+          <Link to="/">
+            <span>
+              <Logo variant="black" />
+            </span>
           </Link>
 
           {/* Center: How It Works & Watch Demo */}
@@ -102,7 +101,8 @@ export function Navbar() {
           {navLinks.map((link) => renderLink(link))}
           <Link
             to="/login"
-            className="bg-black text-white text-sm px-4 py-2 rounded-md text-center hover:bg-gray-800"
+            onClick={() => setOpen(false)}
+            className="bg-black text-white text-sm px-4 py-3 rounded-md text-center hover:bg-gray-800"
           >
             Try For Free
           </Link>
