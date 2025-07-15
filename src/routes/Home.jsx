@@ -1,6 +1,6 @@
 import { Demo } from "../components/Demo";
 import { HeroSection } from "../components/HeroSection";
-import { HowItWorks } from "../components/HowItWorks";
+import { HowItWorks } from "../components/Stepsguide";
 
 export default function Home() {
   return (

@@ -27,7 +27,7 @@ export const HowItWorks = () => {
   return (
     <section className="px-8 lg:px-24 lg:py-10">
       <hr className="border border-[#D7D7D7]" />
-      <button className="border-2 border-[#949494] rounded-lg font-bold  flex items-center gap-x-2  px-4 lg:px-8 py-2 mt-5">
+      <button className="border-2 border-[#949494] rounded-lg font-bold  flex items-center gap-x-2  px-4 lg:px-8 py-1 mt-5">
         {" "}
         <span>
           <img src={howitworks} alt="" />
