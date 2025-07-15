@@ -1,12 +1,12 @@
 import { Demo } from "../components/Demo";
 import { HeroSection } from "../components/HeroSection";
-import { HowItWorks } from "../components/HowItWorks";
+import { Works } from "../components/Works";
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
-      <HowItWorks />
+      <Works />
       <Demo />
     </div>
   );
