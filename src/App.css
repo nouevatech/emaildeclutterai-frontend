@@ -45,3 +45,29 @@ button {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(100ch, calc(100% - 64px))
+    1fr;
+  grid-column-gap: 32px;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.wrapper-hero {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(100ch, calc(100% - 80px))
+    1fr;
+  grid-column-gap: 40px;
+}
+
+.wrapper-hero > * {
+  grid-column: 2;
+}

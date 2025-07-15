@@ -2,10 +2,10 @@ import { IoPlayCircleOutline } from "react-icons/io5";
 import Logo from "./Logo";
 export const Demo = () => {
   return (
-    <section className="px-8 lg:px-24">
+    <section id="demo" className="px-8 lg:px-24">
       <hr className=" border border-[#D7D7D7] text" />
-      <div className="flex flex-col gap-y-3 lg:flex-row lg:gap-y-0 justify-between items-start py-8">
-        <p className="text-[#666666] text-lg lg:text-lg max-w-[500px] ">
+      <div className="flex flex-col gap-8 lg:flex-row lg:gap-y-0 justify-between items-start py-8">
+        <p className="text-[#666666] text-sm lg:text-base max-w-[500px] lg:pt-0 pt-10">
           The AI-powered email decluttering app built for decision-makers.
           Unsubscribe, delete, and summarize in one click.
         </p>
@@ -13,7 +13,7 @@ export const Demo = () => {
           target="_blank"
           rel="noopener noreferrer"
           href="#"
-          className="flex items-center gap-x-2 text-white  bg-[#171717] px-4 py-2 rounded-lg font-medium "
+          className="flex items-center gap-x-2 text-white  bg-[#171717] w-44 justify-center py-2 rounded-lg font-semibold text-sm "
         >
           Watch Demo{" "}
           <span>
