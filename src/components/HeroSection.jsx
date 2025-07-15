@@ -5,12 +5,11 @@ import { HashLink } from "react-router-hash-link";
 
 export const HeroSection = () => {
   return (
-    //
-    <main className="px-6 lg:px-24 lg:py-10 py-3 wrapper-hero">
+    <main className="px-6 lg:px-24 lg:py-10 pt-0 pb-4 wrapper-hero">
       <div className="grid grid-col-1 lg:grid-cols-2 justify-between items-center">
         <div className="pt-20">
-          <div className="lg:w-full w-3/4">
-            <h1 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+          <div className="w-full">
+            <h1 className="text-3xl lg:text-5xl font-semibold leading-tight mb-2">
               Email Decluttering For High-performing CEOs and founders
             </h1>
             <p className="text-gray-500 lg:text-lg mb-8">
