@@ -2,15 +2,14 @@ import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logoblack from "/logoblack.png";
 import Logo from "./Logo";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   const navLinks = [
-    { name: "How It Works", type: "section", path: "#how" },
-    { name: "Watch Demo", type: "section", path: "#demo" },
+    { name: "How It Works", type: "section", path: "/#how" },
+    { name: "Watch Demo", type: "section", path: "/#demo" },
     { name: "Sign In", type: "route", path: "/login" },
   ];
 
@@ -42,7 +41,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-sm px-6 lg:px-10 py-4">
+      <header className="sticky top-0 z-50 bg-white shadow-sm px-6 lg:px-10 py-4 ">
         <div className="relative flex items-center justify-between">
           {/* Left: Logo */}
           <Link to="/">
@@ -66,7 +65,7 @@ export function Navbar() {
             {renderLink({ name: "Sign In", type: "route", path: "/login" })}
             <Link
               to="/login"
-              className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 text-xs font-semibold"
+              className="bg-black text-white px-4 py-3 rounded-md hover:bg-gray-800 text-xs font-semibold"
             >
               Try For Free
             </Link>
@@ -88,7 +87,7 @@ export function Navbar() {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between px-6 py-6 border-b border-gray-200">
+        <div className="flex items-center justify-between px-6 py-4 h-16 border-b border-gray-200">
           <span className="font-semibold">Menu</span>
           <button
             onClick={() => setOpen(false)}
