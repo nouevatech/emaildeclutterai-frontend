@@ -26,7 +26,7 @@ export const HeroSection = () => {
             </Link>
             <HashLink
               smooth
-              to="/#demo"
+              to="/demo"
               rel="noopener noreferrer"
               className=" border border-white hover:border hover:border-black text-black lg:w-44 w-60 text-center py-2 rounded-lg flex items-center justify-center"
             >

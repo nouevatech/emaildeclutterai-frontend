@@ -9,6 +9,7 @@ import Login from "./routes/Login.jsx";
 import Dashboard from "./routes/Dashboard.jsx";
 import Connect from "./routes/Connect.jsx";
 import Connecting from "./routes/Connecting.jsx";
+import DemoLanding from "./components/DemoLanding.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/connecting",
         element: <Connecting />,
+      },
+      {
+        path: "/demo",
+        element: <DemoLanding />,
       },
     ],
   },
