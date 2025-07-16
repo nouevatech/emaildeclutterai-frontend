@@ -1,42 +1,40 @@
+import React, { useEffect, useState } from "react";
+
 export default function InboxOverview() {
-  const categories = [
-    {
-      label: "Priority",
-      count: 180,
-      details: "122 flagged, 58 unread",
-      color: "bg-red-100 text-red-700",
-    },
-    {
-      label: "CC’d",
-      count: 45,
-      details: "You’re copied in 45 emails",
-      color: "bg-green-100 text-green-700",
-    },
-    {
-      label: "Newsletters",
-      count: 180,
-      details: "122 emails, 58 unread",
-      color: "bg-yellow-100 text-yellow-700",
-    },
-    {
-      label: "Socials",
-      count: 180,
-      details: "122 read, 58 unread",
-      color: "bg-pink-100 text-pink-700",
-    },
-    {
-      label: "Promotions",
-      count: 180,
-      details: "122 emails, 58 unread",
-      color: "bg-blue-100 text-blue-700",
-    },
-    {
-      label: "Unknown",
-      count: 180,
-      details: "17 emails from unknown sender",
-      color: "bg-red-100 text-red-700",
-    },
-  ];
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        // 1. Fetch emails from backend
+        const listRes = await fetch("/gmail/list", {
+          credentials: "include",
+        });
+        const listData = await listRes.json();
+
+        // 2. Send emails to categorize endpoint
+        const catRes = await fetch("/gmail/categorize", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ emails: listData.emails }),
+        });
+        const catData = await catRes.json();
+
+        setCategories(catData.categories);
+      } catch (err) {
+        console.error("Error loading inbox overview:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadData();
+  }, []);
+
+  if (loading) return <p>Loading inbox overview...</p>;
+  if (categories.length === 0) return <p>No categories found.</p>;
 
   return (
     <main className="wrapper pt-20">

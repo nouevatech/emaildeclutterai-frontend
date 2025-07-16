@@ -9,7 +9,7 @@ export function Navbar() {
 
   const navLinks = [
     { name: "How It Works", type: "section", path: "/#how" },
-    { name: "Watch Demo", type: "section", path: "/#demo" },
+    { name: "Watch Demo", type: "section", path: "/demo" },
     { name: "Sign In", type: "route", path: "/login" },
   ];
 

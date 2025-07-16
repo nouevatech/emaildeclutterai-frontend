@@ -1,5 +1,6 @@
 import { IoPlayCircleOutline } from "react-icons/io5";
 import Logo from "./Logo";
+import { Link } from "react-router";
 export const Demo = () => {
   return (
     <section id="demo" className="px-8 lg:px-24">
@@ -9,17 +10,17 @@ export const Demo = () => {
           The AI-powered email decluttering app built for decision-makers.
           Unsubscribe, delete, and summarize in one click.
         </p>
-        <a
+        <Link
           target="_blank"
           rel="noopener noreferrer"
-          href="#"
+          href="/demo"
           className="flex items-center gap-x-2 text-white  bg-[#171717] w-44 justify-center py-2 rounded-lg font-semibold text-sm "
         >
-          Watch Demo{" "}
+          Watch Demo
           <span>
             <IoPlayCircleOutline size={26} />
           </span>
-        </a>
+        </Link>
       </div>
       <Logo variant="white" />
     </section>
