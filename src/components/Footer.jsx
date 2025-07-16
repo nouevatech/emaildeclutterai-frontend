@@ -10,7 +10,7 @@ import { HashLink } from "react-router-hash-link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#171717] px-6 lg:px-24 pt-20 pb-10">
+    <footer className="bg-gray-950 px-6 lg:px-24 pt-20 pb-10">
       <span>
         <Logo variant="white" />
       </span>

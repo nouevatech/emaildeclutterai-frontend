@@ -7,6 +7,8 @@ import ErrorPage from "./ErrorPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Login from "./routes/Login.jsx";
 import Dashboard from "./routes/Dashboard.jsx";
+import Connect from "./routes/Connect.jsx";
+import Connecting from "./routes/Connecting.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +25,16 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
+        path: "/connect",
+        element: <Connect />,
+      },
+      {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/connecting",
+        element: <Connecting />,
       },
     ],
   },

@@ -63,7 +63,7 @@ button {
   display: grid;
   grid-template-columns:
     1fr
-    min(100ch, calc(100% - 80px))
+    min(100ch, calc(100% - 60px))
     1fr;
   grid-column-gap: 40px;
 }
