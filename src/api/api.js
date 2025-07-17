@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://emaildeclutterai-backend.onrender.com/api",
+  baseURL: "https://emaildeclutterai-backend.onrender.com",
   withCredentials: true,
 });
 
-export const fetchEmails = () => api.get("/list");
+export const fetchEmails = () => api.get("/gmail/fetch");
 export const prioritizeEmails = (emails) =>
   api.post("/prioritizeEmails", { emails });
 export const summarizeEmails = (emails) =>
