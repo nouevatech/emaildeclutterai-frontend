@@ -93,13 +93,27 @@ export function Navbar() {
             )}
           </div>
 
-          {/* Mobile Menu */}
-          <button
-            className="lg:hidden text-3xl text-gray-700"
-            onClick={() => setOpen(true)}
-          >
-            <BiMenu />
-          </button>
+          {/* Mobile: Avatar + Menu Icon */}
+          <div className="lg:hidden flex items-center space-x-4">
+            {user &&
+              (safeUser.picture ? (
+                <img
+                  src={safeUser.picture}
+                  alt={safeUser.name}
+                  className="w-8 h-8 rounded-full object-cover"
+                />
+              ) : (
+                <div className="w-8 h-8 rounded-full bg-green-900 text-white flex items-center justify-center text-sm font-semibold">
+                  {safeUser.name?.charAt(0)?.toUpperCase() || "?"}
+                </div>
+              ))}
+            <button
+              className="text-3xl text-gray-700"
+              onClick={() => setOpen(true)}
+            >
+              <BiMenu />
+            </button>
+          </div>
         </div>
       </header>
 
