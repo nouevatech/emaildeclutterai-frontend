@@ -11,9 +11,7 @@ export const Demo = () => {
           Unsubscribe, delete, and summarize in one click.
         </p>
         <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/demo"
+          to="/demo"
           className="flex items-center gap-x-2 text-white  bg-[#171717] w-44 justify-center py-2 rounded-lg font-semibold text-sm "
         >
           Watch Demo

@@ -40,7 +40,7 @@ export default function DemoLanding() {
         <h2 className="text-2xl font-semibold mb-2">Important Notes</h2>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            This is a demo; only 10 emails are analyzed, for speed and
+            This is a demo - so only 10 emails are analyzed, for speed and
             simplicity.
           </li>
           <li>
