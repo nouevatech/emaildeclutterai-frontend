@@ -5,7 +5,7 @@ const api = axios.create({
   withCredentials: true,
 });
 
-export const fetchEmails = () => api.get("/gmail/fetch");
+export const fetchEmails = () => api.get("/gmail/list");
 export const prioritizeEmails = (emails) =>
   api.post("/prioritizeEmails", { emails });
 export const summarizeEmails = (emails) =>
