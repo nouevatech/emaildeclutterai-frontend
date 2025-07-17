@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://emaildeclutterai-backend.onrender.com/api",
+  baseURL: "https://emaildeclutterai-backend.onrender.com/gmail",
   withCredentials: true,
 });
 
