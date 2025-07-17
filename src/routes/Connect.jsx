@@ -31,8 +31,10 @@ export default function Connect() {
             Connect your Gmail inbox
           </h2>
           <p className="text-sm text-gray-400 mb-4">
-            We’ll scan your inbox to declutter it intelligently. No information
-            is stored by us. You remain in control of your data.
+            We access only the necessary email metadata to help you declutter
+            your inbox such as subject lines, senders, and labels. We never
+            store or read the content of your emails. You stay in full control
+            of you r data and can disconnect your inbox at any time.
           </p>
 
           <div className="flex items-start gap-1 text-center text-sm text-gray-300 mb-4">

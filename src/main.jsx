@@ -10,6 +10,7 @@ import Dashboard from "./routes/Dashboard.jsx";
 import Connect from "./routes/Connect.jsx";
 import Connecting from "./routes/Connecting.jsx";
 import DemoLanding from "./components/DemoLanding.jsx";
+import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/demo",
         element: <DemoLanding />,
+      },
+      {
+        path: "/privacy",
+        element: <PrivacyPolicy />,
       },
     ],
   },

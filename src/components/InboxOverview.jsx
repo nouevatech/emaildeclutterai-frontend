@@ -1,4 +1,4 @@
-// import React, { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Dashboard2 from "./Dashboard2";
 
 export default function InboxOverview() {
