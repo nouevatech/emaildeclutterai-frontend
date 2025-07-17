@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import DashboardHeader from "./DashboardHeader";
 import { BiMenu } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -6,6 +8,20 @@ import Logo from "./Logo";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("user");
+    if (stored) setUser(JSON.parse(stored));
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/login");
+  };
 
   const navLinks = [
     { name: "How It Works", type: "section", path: "/#how" },
@@ -60,15 +76,21 @@ export function Navbar() {
               .map((link) => renderLink(link))}
           </div>
 
-          {/* Right: Sign In + Try For Free */}
+          {/* Right: User Profile or Auth Buttons */}
           <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-700">
-            {renderLink({ name: "Sign In", type: "route", path: "/login" })}
-            <Link
-              to="/login"
-              className="bg-black text-white px-4 py-3 rounded-md hover:bg-gray-800 text-xs font-semibold"
-            >
-              Try For Free
-            </Link>
+            {user ? (
+              <DashboardHeader user={user} onLogout={handleLogout} />
+            ) : (
+              <>
+                {renderLink({ name: "Sign In", type: "route", path: "/login" })}
+                <Link
+                  to="/login"
+                  className="bg-black text-white px-4 py-3 rounded-md hover:bg-gray-800 text-xs font-semibold"
+                >
+                  Try For Free
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu */}

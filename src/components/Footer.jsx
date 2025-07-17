@@ -5,8 +5,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 import Logo from "./Logo";
 import BlueVector from "../assests/BlueVector.svg";
 import { IoPlayCircleOutline } from "react-icons/io5";
-import logowhite from "/logowhite.png";
-import { HashLink } from "react-router-hash-link";
+// import { HashLink } from "react-router-hash-link";
 
 export const Footer = () => {
   return (
@@ -33,17 +32,16 @@ export const Footer = () => {
           >
             Try For Free
           </Link>
-          <HashLink
+          <Link
             smooth
-            to="/#demo"
-            rel="noopener noreferrer"
+            to="/demo"
             className=" border border-white hover:border hover:border-black text-white lg:w-44 w-32 text-center py-1 rounded-xl flex items-center justify-center lg:text-sm text-xs"
           >
             Watch Demo
             <span>
               <IoPlayCircleOutline size={26} />
             </span>
-          </HashLink>
+          </Link>
         </div>
 
         <div className="flex flex-col pt:0 pt-10 ">
@@ -52,8 +50,11 @@ export const Footer = () => {
             <BsInstagram fill="white" size={18} />
             <IoLogoYoutube fill="white" size={18} />
           </div>
-          <p className="text-gray-300 text-xs opacity-60">
-            All Rights Reserved. 2025 Copyright
+          <span className="text-xs text-gray-300 opacity-80">
+            <Link to="/privacy">Privacy policy</Link>
+          </span>
+          <p className="text-gray-300 text-xs opacity-60 mt-2">
+            &copy; EmailDeclutterAI. 2025. All Rights Reserved.
           </p>
         </div>
       </section>
