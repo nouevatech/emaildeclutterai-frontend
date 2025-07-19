@@ -2,7 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: "https://emaildeclutterai-backend.onrender.com",
-  withCredentials: "include",
+  withCredentials: true,
 });
 
 export const fetchEmails = () => api.get("/gmail/list");

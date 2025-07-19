@@ -24,11 +24,17 @@ export default function Connecting() {
   }, [navigate]);
 
   return (
-    <main className="wrapper flex items-center justify-center h-screen">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-4 border-gray-800 border-t-transparent mx-auto mb-4"></div>
-        <p className="text-gray-800 text-sm">Connecting to Google...</p>
+    <main className="min-h-screen flex flex-col">
+      <div className="flex-grow flex items-center justify-center px-4">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-4 border-gray-800 border-t-transparent mx-auto mb-4"></div>
+          <p className="text-gray-800 text-sm">Connecting to Google...</p>
+        </div>
       </div>
+
+      <footer className="mt-auto text-center py-4 text-sm text-gray-500">
+        &copy; {new Date().getFullYear()} EmailDeclutterAI
+      </footer>
     </main>
   );
 }
