@@ -9,11 +9,8 @@ export default function Connecting() {
     const goToAuth = () => {
       try {
         // Redirect to Google OAuth
-        window.location.href = isLocal
-          ? "http://localhost:5000/auth/google"
-          : "https://emaildeclutterai-backend.onrender.com/auth/google";
-        // window.location.href =
-        //   "https://emaildeclutterai-backend.onrender.com/auth/google";
+        window.location.href =
+          "https://emaildeclutterai-backend.onrender.com/auth/google";
       } catch (err) {
         console.error("Error connecting:", err);
         navigate("/login");
@@ -31,10 +28,6 @@ export default function Connecting() {
           <p className="text-gray-800 text-sm">Connecting to Google...</p>
         </div>
       </div>
-
-      <footer className="mt-auto text-center py-4 text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} EmailDeclutterAI
-      </footer>
     </main>
   );
 }

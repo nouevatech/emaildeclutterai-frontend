@@ -15,6 +15,7 @@ export default function Connect() {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("Auth status response:", data);
         if (!data.authenticated) navigate("/");
         else setCheckingAuth(false);
       })
@@ -92,10 +93,6 @@ export default function Connect() {
           </div>
         </div>
       </div>
-
-      <footer className="mt-auto text-center py-4 text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} EmailDeclutterAI
-      </footer>
     </main>
   );
 }
