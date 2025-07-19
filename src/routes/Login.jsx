@@ -1,14 +1,25 @@
 import { useEffect, useState } from "react";
 import googlecoloricon from "/googlecoloricon.png";
-import { useNavigate } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 
 export default function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    document.title = "Login – EmailDeclutterAI";
-  }, []);
+    const errorParam = searchParams.get("error");
+    const messageParam = searchParams.get("message");
+
+    if (errorParam === "true" && messageParam === "session_failed") {
+      setErrorMessage(
+        "Login failed: Could not establish a secure session. Please try again."
+      );
+    } else {
+      setErrorMessage("");
+    }
+  }, [searchParams]);
 
   const handleLogin = async () => {
     setLoading(true);
